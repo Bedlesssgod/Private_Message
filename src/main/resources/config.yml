@@ -1,0 +1,38 @@
+#Placeholder's
+#Default Minecraft Color codes work example
+#"&b&l%player%&f: &8%message%"
+#%player% is replaced with the Players name that sent the message
+#%message% Is replaced with the message sent by the player
+
+#Player Msg/Whisper/Tell Configuration
+
+#Message Receive/send
+playermsgsend: "&7&oMessage To &4%player%&7&o:%message%"
+playermsgrecieve: "&7&oMessage From &4%player%&7&o:%message%"
+
+#Tell Receive/send
+playertellsend: "&7&oTell To &4%player%&7&o:%message%"
+playertellrecieve: "&7&oTell From &4%player%&7&o:%message%"
+
+#Whisper Receive/send
+playerwsend: "&7&oWhisper To &4%player%&7&o:%message%"
+playerwrecieve: "&7&oWhisper From &4%player%&7&o:%message%"
+
+
+#Server Msg/Whisper/Tell Configuration
+
+#Console/Server-name to be sent with the Messages
+servername: "Console"
+
+#Message Receive/send
+servermsgsend: "&7&oMessage To &4%server%&7&o:%message%"
+servermsgrecieve: "&7&oMessage From &4%server%&7&o:%message%"
+
+#Tell Receive/send
+servertellsend: "&7&oTell To &4%server%&7&o:%message%"
+servertellrecieve: "&7&oTell From &4%server%&7&o:%message%"
+
+
+#Whisper Receive/send
+serverwsend: "&7&oWhisper To &4%server%&7&o:%message%"
+serverwrecieve: "&7&oWhisper From &4%server%&7&o:%message%"
