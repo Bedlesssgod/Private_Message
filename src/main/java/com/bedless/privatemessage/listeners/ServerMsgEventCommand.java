@@ -12,7 +12,6 @@ import org.bukkit.event.server.ServerCommandEvent;
 public class ServerMsgEventCommand implements Listener {
     @EventHandler
     public void onCommandSend(ServerCommandEvent e) {
-        Bukkit.getConsoleSender().sendMessage(e.getCommand());
         if (e.getCommand().toLowerCase().contentEquals("msg")) {
             e.setCancelled(true);
             Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "Incorrect Usage");
@@ -38,10 +37,10 @@ public class ServerMsgEventCommand implements Listener {
                 String msgrecieve = Privatemessage.getInstance().getConfig().getString("servermsgrecieve");
                 String msgsend = Privatemessage.getInstance().getConfig().getString("servermsgsend");
                 //Replacing Placeholders
-                msgrecieve = msgrecieve.replaceAll("%server%", Privatemessage.getInstance().getConfig().getString("servername"));
+                msgsend =  msgsend.replaceAll("%player%", msgp2.getDisplayName());
+                msgsend =  msgsend.replaceAll("%message%", message);
+                msgrecieve = msgrecieve.replaceAll("%server%",  Privatemessage.getInstance().getConfig().getString("servername"));
                 msgrecieve = msgrecieve.replaceAll("%message%", message);
-                msgsend = msgsend.replaceAll("%server%", Privatemessage.getInstance().getConfig().getString("servername"));
-                msgsend = msgsend.replaceAll("%message%", message);
                 //Sending Messages
                 if (message.length() > 3)
                     msgp2.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&', msgrecieve));

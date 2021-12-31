@@ -7,16 +7,16 @@
 #Player Msg/Whisper/Tell Configuration
 
 #Message Receive/send
-playermsgsend: "&dMessage To &7%player%:%message%"
-playermsgrecieve: "&dMessage From %player%&d:%message%"
+playermsgsend: "&7&oMessage To &7%player%:%message%"
+playermsgrecieve: "&7&oMessage From %player%&7&o:%message%"
 
 #Tell Receive/send
-playertellsend: "&dTell To %player%&d:%message%"
-playertellrecieve: "&dTell From %player%&d:%message%"
+playertellsend: "&7&oTell To %player%&7&o:%message%"
+playertellrecieve: "&7&oTell From %player%&7&o:%message%"
 
 #Whisper Receive/send
-playerwsend: "&dWhisper To %player%&d:%message%"
-playerwrecieve: "&dWhisper From %player%&d:%message%"
+playerwsend: "&7&oWhisper To %player%&7&o:%message%"
+playerwrecieve: "&7&oWhisper From %player%&7&o:%message%"
 
 
 #Server Msg/Whisper/Tell Configuration
@@ -25,14 +25,14 @@ playerwrecieve: "&dWhisper From %player%&d:%message%"
 servername: "Console"
 
 #Message Receive/send
-servermsgsend: "&4&lMessage To %server%&d&7:%message%"
-servermsgrecieve: "&4&lMessage From %server%&7:%message%"
+servermsgsend: "&7&oMessage To %player%&7&o&7:%message%"
+servermsgrecieve: "&7&oMessage From %server%&7:%message%"
 
 #Tell Receive/send
-servertellsend: "&4&lTell To %server%&7:%message%"
-servertellrecieve: "&4&lTell From %server%&7:%message%"
+servertellsend: "&7&oTell To %player%&7:%message%"
+servertellrecieve: "&7&oTell From %server%&7:%message%"
 
 
 #Whisper Receive/send
-serverwsend: "&4&lWhisper To %server%&7:%message%"
-serverwrecieve: "&4&lWhisper From %server%&7:%message%"
+serverwsend: "&7&oWhisper To %player%&7:%message%"
+serverwrecieve: "&7&oWhisper From %server%&7:%message%"

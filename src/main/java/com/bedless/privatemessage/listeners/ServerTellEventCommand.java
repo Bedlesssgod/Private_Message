@@ -11,7 +11,6 @@ import org.bukkit.event.server.ServerCommandEvent;
 public class ServerTellEventCommand implements Listener {
     @EventHandler
     public void onCommandSend(ServerCommandEvent e) {
-        Bukkit.getConsoleSender().sendMessage(e.getCommand());
         if (e.getCommand().toLowerCase().contentEquals("tell")) {
             e.setCancelled(true);
             Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "Incorrect Usage");
@@ -37,10 +36,10 @@ public class ServerTellEventCommand implements Listener {
                 String tellrecieve = Privatemessage.getInstance().getConfig().getString("servertellrecieve");
                 String tellsend = Privatemessage.getInstance().getConfig().getString("servertellsend");
                 //Replacing Placeholders
+                tellsend = tellsend.replaceAll("%player%", tellp2.getDisplayName());
+                tellsend = tellsend.replaceAll("%message%", message);
                 tellrecieve = tellrecieve.replaceAll("%server%", Privatemessage.getInstance().getConfig().getString("servername"));
                 tellrecieve = tellrecieve.replaceAll("%message%", message);
-                tellsend = tellsend.replaceAll("%server%", Privatemessage.getInstance().getConfig().getString("servername"));
-                tellsend = tellsend.replaceAll("%message%", message);
                 //Sending Messages
                 if (message.length() > 3)
                     tellp2.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&', tellrecieve));

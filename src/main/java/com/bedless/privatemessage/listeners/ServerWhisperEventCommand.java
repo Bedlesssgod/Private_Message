@@ -11,7 +11,6 @@ import org.bukkit.event.server.ServerCommandEvent;
 public class ServerWhisperEventCommand implements Listener {
     @EventHandler
     public void onCommandSend(ServerCommandEvent e) {
-        Bukkit.getConsoleSender().sendMessage(e.getCommand());
         if (e.getCommand().toLowerCase().contentEquals("w")) {
             e.setCancelled(true);
             Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "Incorrect Usage");
@@ -37,10 +36,10 @@ public class ServerWhisperEventCommand implements Listener {
                 String wrecieve = Privatemessage.getInstance().getConfig().getString("serverwrecieve");
                 String wsend = Privatemessage.getInstance().getConfig().getString("serverwsend");
                 //Replacing Placeholders
+                wsend = wsend.replaceAll("%player%", wp2.getDisplayName());
+                wsend = wsend.replaceAll("%message%", message);
                 wrecieve = wrecieve.replaceAll("%server%", Privatemessage.getInstance().getConfig().getString("servername"));
                 wrecieve = wrecieve.replaceAll("%message%", message);
-                wsend = wsend.replaceAll("%server%", Privatemessage.getInstance().getConfig().getString("servername"));
-                wsend = wsend.replaceAll("%message%", message);
                 //Sending Messages
                 if (message.length() > 3)
                     wp2.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&', wrecieve));

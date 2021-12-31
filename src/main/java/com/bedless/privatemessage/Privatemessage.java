@@ -2,10 +2,7 @@ package com.bedless.privatemessage;
 
 import co.aikar.commands.PaperCommandManager;
 import com.bedless.privatemessage.commands.ReloadConfigCommand;
-import com.bedless.privatemessage.listeners.PlayerMsgEventCommand;
-import com.bedless.privatemessage.listeners.PlayerTellEventCommand;
-import com.bedless.privatemessage.listeners.PlayerWhisperEventCommand;
-import com.bedless.privatemessage.listeners.ServerMsgEventCommand;
+import com.bedless.privatemessage.listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -40,6 +37,8 @@ public final class Privatemessage extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerMsgEventCommand(), this);
         getServer().getPluginManager().registerEvents(new PlayerWhisperEventCommand(), this);
         getServer().getPluginManager().registerEvents(new ServerMsgEventCommand(), this);
+        getServer().getPluginManager().registerEvents(new ServerTellEventCommand(), this);
+        getServer().getPluginManager().registerEvents(new ServerWhisperEventCommand(), this);
     }
 
     @Override
