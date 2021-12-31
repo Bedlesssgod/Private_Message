@@ -11,7 +11,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
-@CommandAlias("msgreload")
+@CommandAlias("reloadpm")
 @CommandPermission("privmsg.reloadcf")
 public class ReloadConfigCommand extends BaseCommand implements Listener {
 

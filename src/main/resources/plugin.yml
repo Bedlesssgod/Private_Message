@@ -1,4 +1,3 @@
 name: Privatemessage
 version: '${project.version}'
 main: com.bedless.privatemessage.Privatemessage
-api-version: 1.18
