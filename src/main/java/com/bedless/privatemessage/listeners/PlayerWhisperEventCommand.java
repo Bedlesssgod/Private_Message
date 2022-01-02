@@ -34,9 +34,9 @@ public class PlayerWhisperEventCommand implements Listener {
                 e.setCancelled(true);
                 try {
                     Privatemessage.getInstance().getConfig();
-                    String wrecieve = Privatemessage.getInstance().getConfig().getString("wrecieve");
-                    String wsend = Privatemessage.getInstance().getConfig().getString("wsend");
-                    wrecieve = wrecieve.replaceAll("%player%", wp2.getDisplayName());
+                    String wrecieve = Privatemessage.getInstance().getConfig().getString("playerwrecieve");
+                    String wsend = Privatemessage.getInstance().getConfig().getString("playerwsend");
+                    wrecieve = wrecieve.replaceAll("%player%", wp.getDisplayName());
                     wrecieve = wrecieve.replaceAll("%message%", wmessage);
                     wsend = wsend.replaceAll("%player%", wp2.getDisplayName());
                     wsend = wsend.replaceAll("%message%", wmessage);

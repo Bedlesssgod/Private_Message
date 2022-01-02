@@ -24,6 +24,7 @@ public class PlayerMsgEventCommand implements Listener {
             String msgraw3 = msgraw.replace(msgrawS[0] + " ", "");
             String msgplayerName = msgrawS[0];
             String message = msgraw.replace(msgplayerName, "");
+
             Player msgp = e.getPlayer();
             Player msgp2 = Bukkit.getPlayerExact(msgplayerName);
             if (message.length() == 0) {
@@ -37,13 +38,13 @@ public class PlayerMsgEventCommand implements Listener {
                     String msgrecieve = Privatemessage.getInstance().getConfig().getString("playermsgrecieve");
                     String msgsend = Privatemessage.getInstance().getConfig().getString("playermsgsend");
                     ;
-                    msgrecieve = msgrecieve.replaceAll("%player%", msgp2.getDisplayName());
+                    msgrecieve = msgrecieve.replaceAll("%player%", msgp.getDisplayName());
                     msgrecieve = msgrecieve.replaceAll("%message%", message);
                     msgsend = msgsend.replaceAll("%player%", msgp2.getDisplayName());
                     msgsend = msgsend.replaceAll("%message%", message);
                     if (message.length() > 3)
-                        msgp2.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&', msgrecieve));
-                    msgp.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&', msgsend));
+                        msgp2.sendMessage(ChatColor.translateAlternateColorCodes('&', msgrecieve));
+                    msgp.sendMessage(ChatColor.translateAlternateColorCodes('&', msgsend));
                 } catch (NullPointerException ex) {
                     msgp.sendMessage(ChatColor.RED + "Couldn't find a player by the name of '" + msgplayerName + "'");
                     ex.printStackTrace();

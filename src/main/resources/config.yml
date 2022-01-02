@@ -7,16 +7,16 @@
 #Player Msg/Whisper/Tell Configuration
 
 #Message Receive/send
-playermsgsend: "&7&oMessage To &7%player%:%message%"
-playermsgrecieve: "&7&oMessage From %player%&7&o:%message%"
+playermsgsend: "&7&oMessage To %player%:%message%"
+playermsgrecieve: "&7&oMessage From %player%:%message%"
 
 #Tell Receive/send
-playertellsend: "&7&oTell To %player%&7&o:%message%"
-playertellrecieve: "&7&oTell From %player%&7&o:%message%"
+playertellsend: "&7&oTell To %player%:%message%"
+playertellrecieve: "&7&oTell From %player%:%message%"
 
 #Whisper Receive/send
-playerwsend: "&7&oWhisper To %player%&7&o:%message%"
-playerwrecieve: "&7&oWhisper From %player%&7&o:%message%"
+playerwsend: "&7&oWhisper To %player%:%message%"
+playerwrecieve: "&7&oWhisper From %player%:%message%"
 
 
 #Server Msg/Whisper/Tell Configuration

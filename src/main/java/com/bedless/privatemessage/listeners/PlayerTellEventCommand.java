@@ -36,9 +36,9 @@ public class PlayerTellEventCommand implements Listener {
                 e.setCancelled(true);
                 try {
                     Privatemessage.getInstance().getConfig();
-                    String tellrecieve = Privatemessage.getInstance().getConfig().getString("tellrecieve");
-                    String tellsend = Privatemessage.getInstance().getConfig().getString("tellsend");
-                    tellrecieve = tellrecieve.replaceAll("%player%", tellp2.getDisplayName());
+                    String tellrecieve = Privatemessage.getInstance().getConfig().getString("playertellrecieve");
+                    String tellsend = Privatemessage.getInstance().getConfig().getString("playertellsend");
+                    tellrecieve = tellrecieve.replaceAll("%player%", tellp.getDisplayName());
                     tellrecieve = tellrecieve.replaceAll("%message%", tellmessage);
                     tellsend = tellsend.replaceAll("%player%", tellp2.getDisplayName());
                     tellsend = tellsend.replaceAll("%message%", tellmessage);
