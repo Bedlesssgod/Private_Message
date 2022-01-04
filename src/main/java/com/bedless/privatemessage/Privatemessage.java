@@ -7,6 +7,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
+
 public final class Privatemessage extends JavaPlugin {
     private static Privatemessage INSTANCE;
     public static Privatemessage getInstance() {
@@ -23,13 +25,14 @@ public final class Privatemessage extends JavaPlugin {
             Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "Enabled");
             Bukkit.getConsoleSender().sendMessage("Running on " + Bukkit.getBukkitVersion());
             Bukkit.getConsoleSender().sendMessage(line1);
-        }else if(version1.equals(7-17)){
+        } else {
             String line1 = ChatColor.GREEN + "===================";
             Bukkit.getConsoleSender().sendMessage(line1);
             Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA + "Private Messages Plugin");
             Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "Enabled");
             Bukkit.getConsoleSender().sendMessage("Running on " + Bukkit.getBukkitVersion());
-            Bukkit.getConsoleSender().sendMessage(ChatColor.DARK_RED + "Unsupported Version! This Plugin may not function as expected Please");
+            Bukkit.getConsoleSender().sendMessage(ChatColor.DARK_RED + "This Plugin is not running on the intended Spigot Version!");
+            Bukkit.getConsoleSender().sendMessage(ChatColor.DARK_RED + "Plugin may not behave as expected!");
             Bukkit.getConsoleSender().sendMessage(line1);
         }
         registerCommands();
